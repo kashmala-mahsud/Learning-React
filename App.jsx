@@ -2,18 +2,18 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { HomePage } from "./pages/HomePage"
+import Timer  from "./Timer";
 
 function App() {
- 
- 
-  return(
-     <div>
-      <HomePage />
-     </div>
+
+   let time ="july,31,2024";
+
+
+  return (
+   <div>
+    <Timer RemainTime={time}/>
+   </div>
   )
-      
-  
   }
 
   
