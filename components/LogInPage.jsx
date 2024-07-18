@@ -6,9 +6,9 @@ export function LogInPage() {
   let [UserDOB, setDOB] = useState(" ");
   let [UserPassword, setPassword] = useState(" ");
   let [ConPassword, setConPassword] = useState(" ");
- let [Errpassword,setErrpassword]=useState("")
-  let [ErrEmail,setErrEmail]=useState("")
-  let [Err,setErr]=useState("")
+  let [Errpassword, setErrpassword] = useState("");
+  let [ErrEmail, setErrEmail] = useState("");
+  let [Err, setErr] = useState("");
   function Submitted(e) {
     e.preventDefault();
     if (
@@ -18,18 +18,19 @@ export function LogInPage() {
       UserPassword &&
       ConPassword === " "
     ) {
-      setErr("Error! please enter values.")
+      setErr("Error! please enter values.");
     } else {
       if (UserPassword === ConPassword) {
-        
         let emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
         if (!emailRegex.test(UserEmail)) {
-          setErrEmail("Error! you have entered invalid email.")
+          setErrEmail("Error! you have entered invalid email.");
         } else {
-          alert(`${UserName},${UserEmail},${UserDOB},${UserPassword},${ConPassword}`)
+          alert(
+            `${UserName},${UserEmail},${UserDOB},${UserPassword},${ConPassword}`
+          );
         }
       } else {
-        setErrpassword("Error! you have entered invalid password")
+        setErrpassword("Error! you have entered invalid password");
       }
     }
   }
