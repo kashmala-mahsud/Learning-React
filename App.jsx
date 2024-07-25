@@ -1,23 +1,47 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import GoogleMeet from "./components/GoogleMeet";
-
-
+import "bootstrap/dist/css/bootstrap.min.css";
+// import GoogleMeet from "./components/GoogleMeet";
+// import Favorite from "./components/Favorite";
+// import { FavoriteProvider } from "./components/FavoriteContext1";
+// import useFavorite from "./components/FavoriteContext1";
+import Timer from "./components/Timer";
 function App() {
-  return (
-    <div className="cardsbody" >
-    <GoogleMeet name='Ali' img='https://images.pexels.com/photos/10147934/pexels-photo-10147934.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&dpr=1' />
-    <GoogleMeet name='Farwa' img="" />
-    <GoogleMeet name='Laiba' img=""/>
-    <GoogleMeet name='Saima' img=""/>
-    <GoogleMeet name='Ayesha' img=""/>
 
-   
+  // const { favParticipants, loading } = useFavorite();
+
+  // console.log("Participants from context:", favParticipants); // Debugging statement
+
+  return (
+    <div>
+      <Timer RemainTime="july,26,2024"/>
+    {/* <div className="cardsbody">
+      <h1>Cards</h1>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <div className="card">
+          {favParticipants && favParticipants.length > 0 ? (
+            favParticipants.map((participant) => (
+              <GoogleMeet key={participant.name} participant={participant} />
+            ))
+          ) : (
+            <p>No participants available</p>
+          )}
+        </div>
+      )}
+      <Favorite />
+    </div> */}
     </div>
   );
+  
 }
 
+// const WrappedApp = () => (
+//   <FavoriteProvider>
+//     <App />
+//   </FavoriteProvider>
+// );
+
+// export default WrappedApp;
 export default App;
