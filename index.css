@@ -53,15 +53,17 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-.cardsbody{
-  display:flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
+
 .cards{
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+ 
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  margin: 10px 30px 10px 50px;
+ flex-wrap: wrap;
+ padding: 2em;
 }
 @media (prefers-color-scheme: light) {
   :root {
