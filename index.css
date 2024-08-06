@@ -23,7 +23,7 @@ a:hover {
 }
 
 body {
-  
+  background-color: rgb(82, 122, 123);
   /* display: flex;
   place-items: center;
   min-width: 320px;
@@ -53,17 +53,18 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-.cards{
-  margin-bottom: 40px;
- 
+.nft-cards-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .card{
-  display: flex;
-  flex-direction: row;
-  margin: 10px 30px 10px 50px;
- flex-wrap: wrap;
- padding: 2em;
+  margin:20px 30px;
+  background-color: rgb(168, 195, 217);
+  color:#083054;
+}
+.card:hover{
+  transition: ease-in-out;
 }
 @media (prefers-color-scheme: light) {
   :root {
